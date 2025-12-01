@@ -10,7 +10,7 @@
 | **2** | **Customer Segmentation with Clustering** | Apply critical thinking and ML concepts to design and implement clustering models to perform customer segmentation and improve marketing efforts. | Preprocessing, Feature Engineering, Outlier Detection, Duplicate Handling, Aggregation, Recency Calculation, Frequency Calculation, CLV (Customer Lifetime Value) Calculation, Customer Age Calculation, Feature Scaling, Column Transformer, Pipeline, EDA, Data Visualization, Histograms, Box Plots, Pair Plots, Correlation Matrix, Clustering, Elbow Method, Silhouette Score, Hierarchical Clustering, Dendrogram, K-Means Clustering, Dimension Reduction, PCA, t-SNE, Statistical Analysis, Model Evaluation |
 | **3** | **Predict Student Dropout** | Use supervised learning techniques to predict whether a student will drop out. Precise information protected under NDA. | Predictive Modeling, Data Preprocessing, Feature Engineering, Ordinal Encoding, One-Hot Encoding, Missing Value Imputation/Removal, Data Splitting, XGBoost, Neural Networks, Hyperparameter Tuning, Model Evaluation, Accuracy, Precision, Recall, F1 Score, AUC (Area Under Curve), Confusion Matrix, Data Merging, Scikit-learn, TensorFlow/Keras, Data Analysis |
 | **4** | **Applying NLP (Natural Language Processing) for Topic modelling in a Real-Life Context** | Analyse gym-company's review data to uncover key drivers that provide actionable insights for enhancing customer experience. Precise information protected under NDA. | NLP, Topic Modelling, BERTopic, Gensim, LDA (Latent Dirichlet Allocation), Emotion Analysis, Data Cleaning, Data Analysis, Data Visualization, Text Preprocessing, Word Clouds, Hugging Face, LLM (Large Language Model, Falcon-7b-instruct), Data Wrangling, NLTK (Natural Language Toolkit) |
-| **5** | **Using Time Series Analysis for Sales and Demand Forecasting** | Identify sales patterns that demonstrate seasonal trends or any other traits, providing insights to inform reordering, restocking, and reprinting decisions for various books. |  |
+| **5** | **Using LLM and GenAI for Sales and Demand Forecasting** | (Group Project) | Team leader,  |
 
 
 ## Project 1: Detecting the Anomalous Activity of a Ship’s Engine
@@ -281,3 +281,94 @@ Further Recommendations:
 - NLTK (Natural Language Toolkit)
 
 ### Introduction
+In today's competitive environment, understanding and responding to customer feedback is essential for business success. Negative customer reviews, in particular, serve as a vital source of unfiltered insights that can reveal operational inefficiencies, product flaws, or service issues. This report presents a detailed analysis of negative customer reviews using advanced topic modelling techniques. The main goal of this project was to systematically identify, categorise, and interpret the most common themes of dissatisfaction within a dataset to offer practical insights for improving operations and enhancing the customer experience. The project encountered several computational challenges, which were successfully overcome to employ a strong, comparative analysis utilising multiple topic modelling approaches for a deeper understanding of the customer feedback landscape. **To maintain anonymity, the specifics and details are protected under a signed NDA and will remain private.**
+
+### Methods
+The analysis utilised a multi-stage approach, applying various Natural Language Processing (NLP) models to the combined negative reviews from Google and Trustpilot Reviews after standard preprocessing (tokenisation, stop-word, and numerical removal).
+
+*Stage 1: Traditional Topic Modelling*
+BERTopic was initially applied to the entire negative review dataset to identify primary themes and clusters. The outputs of BERTopic were then compared with Gensim's LDA (set to 10 topics), which served as the methodological baseline to confirm the high-level themes.
+
+*Stage 2: Emotion and Focused Analysis*
+Emotion analysis was performed using a BERT model to classify the dominant emotion of each negative review, isolating a subset where "anger" was the top emotion. A second, focused BERTopic run was then executed specifically on these angry reviews to identify more granular themes related to intense dissatisfaction.
+
+*Stage 3: LLM-Driven Granularity Refinement*
+To address the limitations of "broad catch-all" clusters from Stage 1, a final, high-resolution analysis was performed. The Falcon-7b-instruct LLM (Large Language Model) was used to extract three main topics from a sample of 100 reviews. This granular output was clustered using a secondary BERTopic analysis. The LLM was then utilised a second time to generate actionable business suggestions based on these refined themes. The execution of this stage required utilising an A100 GPU and 8-bit quantisation to manage model resources.
+
+### Results
+*General Negative Review Analysis (BERTopic and LDA):*
+Initial data investigation revealed key distributional and linguistic characteristics. As shown in Figure 1, 'gym' and 'one' were the most frequent words from both datasets, indicating the general topic focus, though similarities and differences in word frequency existed, necessitating further analysis.
+
+A <img width="444" height="332" alt="image" src="https://github.com/user-attachments/assets/3eb877eb-8dd3-4521-ad09-d97c248b3af1" />
+B <img width="445" height="333" alt="image" src="https://github.com/user-attachments/assets/04071507-c6ea-400d-8cce-8b888db447c9" />
+
+Figure 1: Word clouds of tokenised words from customer reviews from Google (A) and Trustpilot (B).
+
+Analysis of negative review counts confirmed that several Capital-City locations consistently appeared among the top 20 most problematic sites across both platforms, with specific locations detailed in Table 1. This location data guided the focus toward high-frequency problem areas.
+
+Table 1: Top 20 locations with the highest number of negative reviews from Google and Trustpilot.
+|	| Negative Google Reviews	|	| Negative Trustpilot Reviews |	|
+| :---: | :---: | :---: | :---: | :---: |
+| |	Location |	Negative Review Count	| Location	| Negative Review Count |
+| 1	| Capital-City Part 1	| 59	| City 10	| 50 |
+| 2	| Capital-City Part 2	| 26	| 345	| 45 |
+| 3	| Capital-City Part 3	| 26	| Capital-City Part 4	| 23 |
+| 4	| Capital-City Part 4	| 25	| Capital-City Part 1	| 22 |
+| 5	| Capital-City Part 5	| 24	| City 11	| 20 |
+| 6	| Capital-City Part 6	| 22	| Capital-City Part 12	| 18 |
+| 7	| Capital-City Part 7	| 21	| Capital-City Part 11	| 18 |
+| 8	| City 1 Part 1	| 21	| Capital-City Part 8	| 16 |
+| 9	| City 2	| 20	| City 12	| 16 |
+| 10	| City 3	| 19	| Capital-City Part 13	| 16 |
+| 11	| City 4	| 19	| Capital-City Part 14	| 16 |
+| 12	| City 5	| 19	| City 13	| 16 |
+| 13	| City 6	| 18	| City 14	| 15 |
+| 14	| Capital-City Part 8	| 18	| Capital-City Part 15	| 15 |
+| 15	| Capital-City Part 9	| 18	| Capital-City Part 5	| 15 |
+| 16	| City 7	| 17	| Capital-City Part 16	| 15 |
+| 17	| Capital-City Part 10	| 17	| City 15	| 14 |
+| 18	| City 8	| 17	| City 1 Part 1	| 14 |
+| 19	| Capital-City Part 11	| 16	| City 1 Part 2	| 14 |
+| 20	| City 9	| 16	| City 16	| 14 |
+
+The initial BERTopic model on the full negative dataset and the Gensim LDA baseline showed broad agreement, revealing 'catch-all' clusters of customer dissatisfaction: **General Facility, Membership and Access, Crowding and Equipment, Social Interactions, and Facility Conditions**. The presence of 'gibberish' clusters confirmed the limitation of the preprocessing step for these traditional models.
+
+*Emotion Analysis and Focused Findings:*
+Analysis of reviews classified as 'angry' provided more focused feedback, confirming the persistence of core themes but with greater detail: **Access Issues (PINS/app), Hygiene and Odour, Locker Room Problems, and Temperature Concerns**. This stage demonstrated that high emotional intensity directly correlates with specific, actionable feedback.
+
+*LLM-Driven Topic Refinement:*
+The hierarchical LLM approach successfully addressed the ambiguity of the general clusters by extracting and clustering 299 phrases into 8 distinct, high-impact operational themes (see Table 2). The LLM analysis successfully validated the general areas identified by LDA but provided the necessary granular detail. For instance, the LLM separated the broad 'Social Interactions' theme into two distinct issues: Customer Service (unhelpful) and Staff Attitude (unprofessional).
+
+Table 2: LLM-Driven BERTopic Results (8 Core Negative Themes).
+| Topic ID	| Frequency Count	| Key Theme	| Representative Words	| Focus of Customer Dissatisfaction |
+| :---: | :---: | :---: | :---: | :---: |
+| 1	| 52	| Cleanliness/Hygiene	| Dirty, rooms, changing, water, hygiene, showers	| Facility Cleanliness and Maintenance |
+| 2	| 50	| Gym Environment	| Gym, environment, crowding, atmosphere, poor, noise	| Operational Atmosphere and Overcrowding |
+| 3	| 38	| Poor Customer Service	| Service, customer, poor, friendly, experience, support	| Failure in Customer Support |
+| 4	| 28	| Membership/Billing Errors	| Payment, account, fees, membership, bank, subscription	| Administrative and Financial Issues |
+| 5	| 20	| Equipment Issues	| Machines, equipment, broken, cable, maintenance, old	| Equipment Availability and Quality |
+| 6	| 19	| Staff Attitude	| Staff, attitude, communication, unprofessional, rude	| Employee Conduct and Professionalism |
+| 7	| 17	| Quality of Offerings	| Quality, products, service, value, offering, class	| Perceived Quality of Products/Classes |
+| 8	| 13	| Logistics/Access	| Parking, free, crowding, area, logistics, availability	| Parking and Facility Access |
+
+Crucially, the LLM successfully filtered out the noise found in the LDA and initial BERTopic runs, resulting in exact themes. The two highest frequency topics were Cleanliness / Hygiene (Topic 1) and Gym Environment (Topic 2). The final output of the LLM translated these 8 validated and refined themes into strategic recommendations: **Hygiene Priority, Service Training, Billing Clarity, Proactive Maintenance, and Environment Management.**
+
+### Conclusion
+Customer complaints consistently focused on app usability, facilities, and service. The project's multi-method approach established a clear path from broad dissatisfaction to specific solutions:
+
+•	Traditional models (BERTopic and LDA) established the scope of issues (**Facility, Membership, Staff**).
+•	Emotion Analysis confirmed the most intense complaints related to **Access** and **Hygiene**.
+•	The LLM-driven analysis provided the final, granular resolution, confirming the high-priority themes while eliminating the ambiguity of initial clusters.
+
+The LLM analysis successfully confirmed the general areas identified by the LDA baseline but provided the necessary resolution to identify the most critical operational failures: **Hygiene** and **Facility Maintenance** and systemic **Customer Service** and **Billing** failures.
+
+*Recommendations:*
+1	**Prioritise top themes (LLM validation):** Based on the LLM's high-resolution clustering, focus operational spending on **Hygiene, Equipment Maintenance,** and **Staff Training** (attitude and service).
+2	**Address billing systemically:** Implement changes to the membership payment system to increase clarity and reduce errors, directly addressing administrative friction confirmed across all analyses.
+3	**Localised action:** Use the negative review frequency data (Table 1) to target problematic locations (such as Capital-City Part 1) for pilot programs implementing these changes.
+
+## Project 5: Using LLM and GenAI for Sales and Demand Forecasting
+### Date: December, 2025
+
+### Skills/Techniques
+- 
