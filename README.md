@@ -516,5 +516,14 @@ By articulating a clear journey from problem definition to validated solution, t
 ### Appendix
 These were individual projects completed with other generative AIs and compared against their own baseline results before deciding on the final agentic framework.
 
+![image alt](https://github.com/grahamburberry-coder/grahamburberry-coder.github.io/blob/8c47244dea2838574898efa499a03a004461fa3f/Screenshot%202026-03-15%20at%2021.58.57.png)
+**Appendix 1:** Baseline comparison of the Chilean market using XGBoost and SARIMAX, and an exploration of potential economic drivers of Chile’s car sales.
 
-**Appendix 1:** 
+![image alt](https://github.com/grahamburberry-coder/grahamburberry-coder.github.io/blob/40d2f41edf6351c79ffd9671126bf8c888c94964/Screenshot%202026-03-15%20at%2021.59.53.png)
+**Appendix 2:** Generative AI comparison's of LAG-Llama, TimeGPT and Amazon Chronos for the Chilean market.
+
+![image alt](https://github.com/grahamburberry-coder/grahamburberry-coder.github.io/blob/28e89de454a0281c37f7d72b9dce251ef192c952/Screenshot%202026-03-15%20at%2022.12.33.png)
+**Appendix 3:** Baseline comparison of the Peruvian market using XGBoost and SARIMAX, and an exploration of potential economic drivers of Peru’s car sales.
+
+![image alt](https://github.com/grahamburberry-coder/grahamburberry-coder.github.io/blob/30590773b2e703aed707936b1ab12e6aceb3365a/Screenshot%202026-03-15%20at%2022.15.20.png)
+**Appendix 4:** Generative AI comparison's of LAG-Llama, TimeGPT and Amazon Chronos for the Peruvean market.
