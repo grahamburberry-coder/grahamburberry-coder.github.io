@@ -385,10 +385,10 @@ The LLM analysis successfully confirmed the general areas identified by the LDA 
 - Model Evaluation & Validation (MAPE, R2, Back-testing)
 
 ### Problem Statement and Business Motivation
-Accurate sales forecasting is a persistent challenge for automotive distributors operating across heterogeneous markets. Inchcape’s Chilean and Peruvian operations face distinct economic conditions, demand volatility, and structural changes driven by inflation, interest rates, commodity cycles, and consumer credit availability. Traditional forecasting approaches rely heavily on historical sales trends and often fail when markets undergo regime shifts or when external economic forces dominate purchasing behaviour.
+Accurate sales forecasting is a persistent challenge for automotive distributors operating across heterogeneous markets. The company’s Chilean and Peruvian operations face distinct economic conditions, demand volatility, and structural changes driven by inflation, interest rates, commodity cycles, and consumer credit availability. Traditional forecasting approaches rely heavily on historical sales trends and often fail when markets undergo regime shifts or when external economic forces dominate purchasing behaviour.
 
 The core problem addressed in this project is therefore twofold. First, how can sales forecasts be generated that remain robust across markets with very different statistical properties? Second, how can those forecasts be made explainable and useful to business stakeholders, rather than functioning as opaque numerical outputs?
-The solution developed in this project moves beyond a single-model forecasting exercise. Instead, it proposes and implements an Agentic AI forecasting system that evaluates multiple modelling approaches, selects the most appropriate model per market, and augments numerical forecasts with qualitative economic context. The aim is not only predictive accuracy, but decision support.
+The solution developed in this project moves beyond a single-model forecasting exercise. Instead, it proposes and implements an Agentic AI forecasting system that evaluates multiple modelling approaches, selects the most appropriate model per market, and augments numerical forecasts with qualitative economic context. The aim is not only predictive accuracy, but decision support. **To maintain anonymity, the specifics and details are protected under a signed NDA and will remain private.**
 
 ### Overall Solution Journey
 The project evolved through a clear analytical journey, beginning with a conventional time-series forecasting problem and culminating in a modular, agent-based system integrating statistical models, machine learning, foundation models, and retrieval-augmented generation (RAG).
@@ -442,74 +442,79 @@ The inclusion of R² was a deliberate decision to avoid over-reliance on error m
 ### Results and Comparative Analysis
 To validate the Agentic AI architecture, we implemented a "tournament" strategy to evaluate the performance of the models over a blind 1-year back-testing window.
 
-Table 1: Forecast performance leaderboard.
+**Table 1:** Forecast performance leaderboard.
  
 | Market | Metric | Baseline (SARIMA) | Baseline (XGBoost) | GenAI (TimeGPT) | 
 | :---: | :---: | :---: | :---: | :---: |
 | Chile | MAPE | 18.31% | 27.32% | 6.53% |
-| | R2 | -3.93 | -7.17 | 0.34 |
+| | R² | -3.93 | -7.17 | 0.34 |
 | Peru | MAPE | 10.61% | 14.38% | 13.51% |
-| | R2 | -1.25 | -2.64 | -2.30 |
+| | R² | -1.25 | -2.64 | -2.30 |
 
 
 *Chile*
 
 ![image alt](https://github.com/grahamburberry-coder/grahamburberry-coder.github.io/blob/7273fbebf9de5f3ee6be89d63367cadbbfea3092/Screenshot%202026-03-15%20at%2020.42.25.png)
-Figure 1: Chile (Actual; black) forecast comparison between SARIMA (blue), XGBoost (orange) and TimeGPT (green).
+**Figure 1:** Chile (Actual; black) forecast comparison between SARIMA (blue), XGBoost (orange) and TimeGPT (green).
 
 In the Chilean market, the foundation model (TimeGPT) demonstrated clear superiority over traditional methods, capturing the complex volatility in recent sales data.
-Predictive Accuracy: As displayed in Table 1, TimeGPT achieved the lowest MAPE of 6.53%, significantly outperforming the SARIMA baseline (18.31%) and XGBoost (27.32%).
-Statistical Fit: Crucially, TimeGPT was the only model to achieve a positive R2 of 0.34. This indicates that the GenAI model successfully explained over 30% of the market variance.
-Visual Analysis: As shown in Figure 1, the TimeGPT forecast (green line) closely tracks the peaks and troughs of the actual sales data (black line), whereas baseline models fail to respond to rapid shifts in consumer demand.
+* **Predictive Accuracy:** As displayed in Table 1, TimeGPT achieved the lowest MAPE of 6.53%, significantly outperforming the SARIMA baseline (18.31%) and XGBoost (27.32%).
+* **Statistical Fit:** Crucially, TimeGPT was the only model to achieve a positive R2 of 0.34. This indicates that the GenAI model successfully explained over 30% of the market variance.
+* **Visual Analysis:** As shown in Figure 1, the TimeGPT forecast (green line) closely tracks the peaks and troughs of the actual sales data (black line), whereas baseline models fail to respond to rapid shifts in consumer demand.
  
 *Peru*
  
-
-Figure 2: Peru (Actual; black) forecast comparison between SARIMA (blue), XGBoost (orange) and TimeGPT (green).
+![image alt](https://github.com/grahamburberry-coder/grahamburberry-coder.github.io/blob/dcbc16c24801584450e57cc8193afe02d8afbd33/Screenshot%202026-03-15%20at%2021.14.19.png)
+**Figure 2:** Peru (Actual; black) forecast comparison between SARIMA (blue), XGBoost (orange) and TimeGPT (green).
 
 The Peruvian market posed a different challenge, characterised by high volatility and no clear trend.
-Defensive Forecasting: In this environment, the advanced TimeGPT model struggled to find a pattern (MAPE 13.51%), as displayed in Table 1. The traditional SARIMA model proved to be the "safest" option, winning the leaderboard with a 10.61% MAPE by taking a conservative middle path through the noise.
-The Structural Break: A critical finding was that all models yielded negative R2 scores (SARIMA, -1.25; XGBoost, -2.64; TimeGPT, -2.30). This indicates that recent market behaviour cannot be adequately explained by historical sales patterns alone.
-Visual Evidence: As shown in Figure 2, all three model lines diverge significantly from the actual (black) sales spikes, indicating a "structural break" in the market regime.
-Strategic Pivot: This result was a turning point. Rather than attempting further model tuning, the analysis recognised a structural limitation: the problem was no longer purely statistical. This failure of quantitative methods provided the empirical justification for the RAG.
+* **Defensive Forecasting:** In this environment, the advanced TimeGPT model struggled to find a pattern (MAPE 13.51%), as displayed in Table 1. The traditional SARIMA model proved to be the "safest" option, winning the leaderboard with a 10.61% MAPE by taking a conservative middle path through the noise.
+* **The Structural Break:** A critical finding was that all models yielded negative R2 scores (SARIMA, -1.25; XGBoost, -2.64; TimeGPT, -2.30). This indicates that recent market behaviour cannot be adequately explained by historical sales patterns alone.
+* **Visual Evidence:** As shown in Figure 2, all three model lines diverge significantly from the actual (black) sales spikes, indicating a "structural break" in the market regime.
+* **Strategic Pivot:** This result was a turning point. Rather than attempting further model tuning, the analysis recognised a structural limitation: the problem was no longer purely statistical. This failure of quantitative methods provided the empirical justification for the RAG.
 
-Iteration: Introducing Retrieval-Augmented Generation (RAG)
-Rationale for Explanability Agent
+### Iteration: Introducing Retrieval-Augmented Generation (RAG)
+*Rationale for Explanability Agent*
 The decision to introduce RAG was driven by empirical evidence rather than novelty. Negative R² values across all models in Peru indicated that numerical forecasting alone was insufficient. Business stakeholders require explanations grounded in economic reality, not just model outputs.
 
 RAG was therefore introduced to provide contextual reasoning rather than to directly improve forecast accuracy.
 
-Implementation and Design Choices
+*Implementation and Design Choices*
 A Librarian Agent was implemented to ingest external economic documents, chunk them into semantically meaningful units, and store them in a FAISS vector database. A Super-Agent equipped with both data-analysis and document-retrieval tools was then layered on top.
 
 This design choice ensured that qualitative context could be retrieved dynamically and linked to quantitative forecasts without contaminating the forecasting models themselves.
 
-Impact of Iteration and Refinement
+### Impact of Iteration and Refinement
 Each iteration refined the solution in response to observed weaknesses:
-Baseline models established expectations.
-Foundation models addressed non-linear dynamics.
-RAG addressed explainability gaps revealed during validation.
+* Baseline models established expectations.
+* Foundation models addressed non-linear dynamics.
+* RAG addressed explainability gaps revealed during validation.
 
 Crucially, the project avoided uncontrolled complexity. Each refinement served a specific, validated purpose, ensuring the final system remained interpretable and aligned with business needs.
 
-Final Solution and Business Value
+### Final Solution and Business Value
 The final system delivers a hybrid, agentic forecasting capability that adapts to market conditions. It selects appropriate models based on empirical performance and provides contextual explanations when forecasts alone are insufficient.
 
-For Inchcape, this represents a shift from static forecasting to an adaptive decision-support framework. The system not only answers what will happen, but provides evidence-based reasoning about why.
+For the company, this represents a shift from static forecasting to an adaptive decision-support framework. The system not only answers what will happen, but provides evidence-based reasoning about why.
 
-Conclusion
+### Conclusion
 This project demonstrates that effective forecasting in complex markets requires more than sophisticated algorithms; it requires an architecture that can evaluate alternatives and incorporate external knowledge when necessary.
 
-Key Findings
+*Key Findings*
 The solution successfully moved beyond a purely numerical exercise to create a decision-support system.
-Hybrid Agility: The results confirm that no single model is universally superior. A hybrid strategy—deploying TimeGPT for learnable markets (Chile) and robust statistical baselines for volatile ones (Peru)—maximises overall accuracy.
-The Value of Context: The explainability agent (RAG) successfully filled the gap left by quantitative models in Peru, transforming opaque numerical outputs into defensible, context-aware insights.
+1. **Hybrid Agility:** The results confirm that no single model is universally superior. A hybrid strategy—deploying TimeGPT for learnable markets (Chile) and robust statistical baselines for volatile ones (Peru)—maximises overall accuracy.
+2. **The Value of Context:** The explainability agent (RAG) successfully filled the gap left by quantitative models in Peru, transforming opaque numerical outputs into defensible, context-aware insights.
 
-Recommendations and Next Steps
-To further implement this system for Inchcape, we recommend the following:
-Deploy "Leaderboard" Logic: Operationalise the tournament logic to automatically switch between TimeGPT and the best baseline model based on the most recent performance rolling window.
-Scale to New Markets: The "Data Agent" successfully harmonised disparate file formats, indicating the system is ready to be tested in other South American markets, such as Colombia or Ecuador, with minimal code changes.
-Deepen the Knowledge Base: Systematically upload monthly economic reports (e.g., from ANAC or AAP) to the vector store to improve the resolution of the "Why" behind the forecasts.
+*Recommendations and Next Steps*
+To further implement this system for the comapny, we recommend the following:
+* **Deploy "Leaderboard" Logic:** Operationalise the tournament logic to automatically switch between TimeGPT and the best baseline model based on the most recent performance rolling window.
+* **Scale to New Markets:** The "Data Agent" successfully harmonised disparate file formats, indicating the system is ready to be tested in other South American markets, such as Colombia or Ecuador, with minimal code changes.
+* **Deepen the Knowledge Base:** Systematically upload monthly economic reports (e.g., from ANAC or AAP) to the vector store to improve the resolution of the "Why" behind the forecasts.
 
 By articulating a clear journey from problem definition to validated solution, this project delivers a robust, agentic system aligned with real business needs.
 
+### Appendix
+These were individual projects completed with other generative AIs and compared against their own baseline results before deciding on the final agentic framework.
+
+
+**Appendix 1:** 
