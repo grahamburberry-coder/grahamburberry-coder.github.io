@@ -454,7 +454,7 @@ Table 1: Forecast performance leaderboard.
 
 *Chile*
 
-
+![image alt](https://github.com/grahamburberry-coder/grahamburberry-coder.github.io/blob/7273fbebf9de5f3ee6be89d63367cadbbfea3092/Screenshot%202026-03-15%20at%2020.42.25.png)
 Figure 1: Chile (Actual; black) forecast comparison between SARIMA (blue), XGBoost (orange) and TimeGPT (green).
 
 In the Chilean market, the foundation model (TimeGPT) demonstrated clear superiority over traditional methods, capturing the complex volatility in recent sales data.
