@@ -128,26 +128,18 @@ Based on statistical methods through K-Means of clustering, the business should 
 ### Date: August, 2025
 
 ### Skills/Techniques
-- Predictive Modeling
-- Data Preprocessing
-- Feature Engineering
-- Ordinal Encoding
-- One-Hot Encoding
-- Missing Value Imputation/Removal
-- Binary Classification
-- Data Splitting
-- Stratified Train/Test Split (80/20)
-- Class Imbalance Handling
-- XGBoost
-- Neural Networks
-- Multi-Layer Perceptron (MLP)
-- ReLU Activation
-- Sigmoid Activation
-- Hyperparameter Tuning
-- GridSearchCV
-- Feature Importance Analysis
-- Loss Curve Analysis
-- Model Evaluation, Accuracy, Precision, Recall, F1 Score, AUC (Area Under Curve), Confusion Matrix, Data Merging, Scikit-learn, TensorFlow/Keras, Data Analysis, Jupyter Notebooks, Google Colab, Cloud GPU Computing
+| Predictive Modeling | Neural Networks | Recall | 
+| :--- | :--- | :--- |
+| Data Preprocessing | Multi-Layer Perceptron (MLP) | F1 Score | 
+| Feature Engineering | ReLU Activation | AUC (Area Under Curve) | 
+| Ordinal Encoding | Sigmoid Activation | Confusion Matrix | 
+| One-Hot Encoding | Hyperparameter Tuning | Data Merging | 
+| Missing Value Imputation/Removal | GridSearchCV | Scikit-learn | 
+| Binary Classification | Feature Importance Analysis | TensorFlow/Keras | 
+| Data Splitting | Loss Curve Analysis | Data Analysis | 
+| Stratified Train/Test Split (80/20) | Model Evaluation | Jupyter Notebooks | 
+| Class Imbalance Handling | Accuracy | Google Colab | 
+| XGBoost | Precision | Cloud GPU Computing |
 
 ### Introduction
 Student dropout poses significant challenges for educational institutions, causing financial losses, reputational damage, and obstructing students' growth. Predicting dropout risk is vital for timely interventions to boost retention and success. This project develops and evaluates supervised learning models to forecast dropouts at various academic stages using data from a study group. The goal is to identify key dropout factors and find the most predictive stages. **To maintain anonymity, the specifics and details are protected under a signed NDA and will remain private.**
@@ -247,21 +239,19 @@ Further Recommendations:
 ### Date: September, 2025
 
 ### Skills/Techniques
-- NLP
-- Topic Modelling
-- BERTopic
-- Gensim
-- LDA (Latent Dirichlet Allocation)
-- Emotion Analysis
-- Data Cleaning
-- Data Analysis
-- Data Visualization
-- Text Preprocessing
-- Word Clouds
-- Hugging Face
-- LLM (Large Language Model, Falcon-7b-instruct)
-- Data Wrangling
-- NLTK (Natural Language Toolkit)
+| NLP | Text Preprocessing |
+| :--- | :--- |
+| Multi-stage NLP Pipeline | Tokenisation |
+| Topic Modelling | Stop-word Removal |
+| BERTopic | Word Clouds |
+| Gensim | Hugging Face |
+| LDA (Latent Dirichlet Allocation) | LLM (Large Language Model, Falcon-7b-instruct) |
+| Emotion Analysis | Data Wrangling |
+| Sentiment Analysis | NLTK (Natural Language Toolkit) |
+| BERT (Emotion Classification) | Jupyter Notebooks |
+| Data Cleaning | Google Colab |
+| Data Analysis | Cloud GPU Computing |
+| Data Visualization | |
 
 ### Introduction
 In today's competitive environment, understanding and responding to customer feedback is essential for business success. Negative customer reviews, in particular, serve as a vital source of unfiltered insights that can reveal operational inefficiencies, product flaws, or service issues. This report presents a detailed analysis of negative customer reviews using advanced topic modelling techniques. The main goal of this project was to systematically identify, categorise, and interpret the most common themes of dissatisfaction within a dataset to offer practical insights for improving operations and enhancing the customer experience. The project encountered several computational challenges, which were successfully overcome to employ a strong, comparative analysis utilising multiple topic modelling approaches for a deeper understanding of the customer feedback landscape. **To maintain anonymity, the specifics and details are protected under a signed NDA and will remain private.**
@@ -354,18 +344,15 @@ The LLM analysis successfully confirmed the general areas identified by the LDA 
 ### Date: December, 2025
 
 ### Skills/Techniques
-- Team Leadership
-- Project Management
-- Stakeholder Communication
-- Strategic Problem Solving
-- Agentic AI Architecture (LangGraph, LangSmith, Modular AI Agents)
-- Time-Series Forecasting (XGBoost, SARIMAX, SARIMA)
-- Generative AI & Foundation Models (TimeGPT, Amazon Chronos, Lag-Llama)
-- Retrieval-Augmented Generation (RAG; FAISS Vector Stores, PDF Ingestion)
-- Zero-Shot & Fine-Tuning Experiments
-- Advanced Data Preprocessing
-- EDA
-- Model Evaluation & Validation (MAPE, R2, Back-testing)
+| Team Leadership | Zero-Shot & Fine-Tuning Experiments |
+| :---: | :---: |
+| Project Management | Advanced Data Preprocessing |
+| Stakeholder Communication | EDA |
+| Strategic Problem Solving | Model Evaluation & Validation (MAPE, R², Back-testing) |
+| Agentic AI Architecture (LangGraph, LangSmith, Modular AI Agents) | Jupyter Notebooks |
+| Time-Series Forecasting (XGBoost, SARIMAX, SARIMA) | Google Colab |
+| Generative AI & Foundation Models (TimeGPT, Amazon Chronos, Lag-Llama) | Cloud GPU Computing |
+| Retrieval-Augmented Generation (RAG; FAISS Vector Stores, PDF Ingestion) | |
 
 ### Problem Statement and Business Motivation
 Accurate sales forecasting is a persistent challenge for automotive distributors operating across heterogeneous markets. The company’s Chilean and Peruvian operations face distinct economic conditions, demand volatility, and structural changes driven by inflation, interest rates, commodity cycles, and consumer credit availability. Traditional forecasting approaches rely heavily on historical sales trends and often fail when markets undergo regime shifts or when external economic forces dominate purchasing behaviour.
