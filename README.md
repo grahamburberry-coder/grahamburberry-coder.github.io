@@ -2,7 +2,7 @@
 
 ## Portfolio Contents
 
-**Core Skills:** Python, Scikit-learn, TensorFlow/Keras, XGBoost, Pandas, NLTK, Gensim, Hugging Face
+**Core Languages and Libraries:** Python, Scikit-learn, TensorFlow/Keras, XGBoost, Pandas, NLTK, Gensim, Hugging Face
 
 | No. | Title | Problem | Skills/Techniques |
 | :--- | :--- | :--- | :--- |
