@@ -2,32 +2,32 @@
 
 ## Portfolio Contents
 
-**Core Skill:** Python
+**Core Skills:** Python, Scikit-learn, TensorFlow/Keras, XGBoost, Pandas, NLTK, Gensim, Hugging Face
 
 | No. | Title | Problem | Skills/Techniques |
 | :--- | :--- | :--- | :--- |
-| **1** | **Detecting the Anomalous Activity of a Ship’s Engine** | Apply critical thinking and ML (Machine Learning) concepts to design and implement a robust anomaly detection model. | EDA (Exploratory Data Analysis), Descriptive Statistics, Data Visualization, Anomaly Detection (Statistical), IQR (Interquartile Range) Method, Anomaly Detection (Machine Learning), One-Class SVM (Support Vector Machine), Isolation Forest, Feature Scaling, PCA (Principal Component Analysis) |
-| **2** | **Customer Segmentation with Clustering** | Apply critical thinking and ML concepts to design and implement clustering models to perform customer segmentation and improve marketing efforts. | Preprocessing, Feature Engineering, Outlier Detection, Duplicate Handling, Aggregation, Recency Calculation, Frequency Calculation, CLV (Customer Lifetime Value) Calculation, Customer Age Calculation, Feature Scaling, Column Transformer, Pipeline, EDA, Data Visualization, Histograms, Box Plots, Pair Plots, Correlation Matrix, Clustering, Elbow Method, Silhouette Score, Hierarchical Clustering, Dendrogram, K-Means Clustering, Dimension Reduction, PCA, t-SNE, Statistical Analysis, Model Evaluation |
-| **3** | **Predict Student Dropout** | Use supervised learning techniques to predict whether a student will drop out. Precise information protected under NDA. | Predictive Modeling, Data Preprocessing, Feature Engineering, Ordinal Encoding, One-Hot Encoding, Missing Value Imputation/Removal, Data Splitting, XGBoost, Neural Networks, Hyperparameter Tuning, Model Evaluation, Accuracy, Precision, Recall, F1 Score, AUC (Area Under Curve), Confusion Matrix, Data Merging, Scikit-learn, TensorFlow/Keras, Data Analysis |
-| **4** | **Applying NLP (Natural Language Processing) for Topic modelling in a Real-Life Context** | Analyse gym-company's review data to uncover key drivers that provide actionable insights for enhancing customer experience. Precise information protected under NDA. | NLP, Topic Modelling, BERTopic, Gensim, LDA (Latent Dirichlet Allocation), Emotion Analysis, Data Cleaning, Data Analysis, Data Visualization, Text Preprocessing, Word Clouds, Hugging Face, LLM (Large Language Model, Falcon-7b-instruct), Data Wrangling, NLTK (Natural Language Toolkit) |
-| **5** | **Using LLM and GenAI for Sales and Demand Forecasting** |  Group Project: Use unused GenAI models as an option for the company to forcast sales using two countries collected data. Precise information protected under NDA. | Team Leadership, Project Management, Stakeholder Communication, Strategic Problem Solving, Agentic AI Architecture (LangGraph, LangSmith, Modular AI Agents), Time-Series Forecasting (XGBoost, SARIMAX, SARIMA), Generative AI & Foundation Models (TimeGPT, Amazon Chronos, Lag-Llama), Retrieval-Augmented Generation (RAG; FAISS Vector Stores, PDF Ingestion), Zero-Shot & Fine-Tuning Experiments, Advanced Data Preprocessing, EDA, Model Evaluation & Validation (MAPE, R2, Back-testing) |
+| **1** | **Detecting the Anomalous Activity of a Ship’s Engine** | Apply critical thinking and ML (Machine Learning) concepts to design and implement a robust anomaly detection model. | EDA (Exploratory Data Analysis), Descriptive Statistics, Data Visualisation, Histograms, Anomaly Detection (Statistical), IQR (Interquartile Range) Method, Anomaly Detection (Machine Learning), One-Class SVM (Support Vector Machine), Isolation Forest, Feature Scaling, PCA (Principal Component Analysis), Jupyter Notebooks, Google Colab |
+| **2** | **Customer Segmentation with Clustering** | Apply critical thinking and ML concepts to design and implement clustering models to perform customer segmentation and improve marketing efforts. | Preprocessing, Feature Engineering, Outlier Detection, Duplicate Handling, Aggregation, Recency Calculation, Frequency Calculation, CLV (Customer Lifetime Value) Calculation, Customer Age Calculation, RFM Analysis, Feature Scaling, StandardScaler, Column Transformer, Pipeline, EDA (Exploratory Data Analysis), Histograms, Box Plots, Pair Plots, Correlation Matrix, Clustering, Elbow Method, Inertia Analysis, Silhouette Score, Hierarchical Clustering, Dendrogram, K-Means Clustering, Dimension Reduction, PCA (Principal Component Analysis), t-SNE (t-distributed Stochastic Neighbor Embedding), Statistical Analysis, Model Evaluation, Jupyter Notebooks, Google Colab |
+| **3** | **Predict Student Dropout** | Use supervised learning techniques to predict whether a student will drop out. Precise information protected under NDA. | Predictive Modeling, Data Preprocessing, Feature Engineering, Ordinal Encoding, One-Hot Encoding, Missing Value Imputation/Removal, Binary Classification, Data Splitting, Stratified Train/Test Split (80/20), Class Imbalance Handling, XGBoost, Neural Networks, Multi-Layer Perceptron (MLP), ReLU Activation, Sigmoid Activation, Hyperparameter Tuning, GridSearchCV, Feature Importance Analysis, Loss Curve Analysis, Model Evaluation, Accuracy, Precision, Recall, F1 Score, AUC (Area Under Curve), Confusion Matrix, Data Merging, Scikit-learn, TensorFlow/Keras, Data Analysis, Jupyter Notebooks, Google Colab, Cloud GPU Computing |
+| **4** | **Applying NLP (Natural Language Processing) for Topic modelling in a Real-Life Context** | Analyse gym-company's review data to uncover key drivers that provide actionable insights for enhancing customer experience. Precise information protected under NDA. | NLP, Multi-stage NLP Pipeline, Topic Modelling, BERTopic, Gensim, LDA (Latent Dirichlet Allocation), Emotion Analysis, Sentiment Analysis, BERT (Emotion Classification), Data Cleaning, Data Analysis, Data Visualization, Text Preprocessing, Tokenisation, Stop-word Removal, Word Clouds, Hugging Face, LLM (Large Language Model, Falcon-7b-instruct), Data Wrangling, NLTK (Natural Language Toolkit), Jupyter Notebooks, Google Colab, Cloud GPU Computing |
+| **5** | **Using LLM and GenAI for Sales and Demand Forecasting** |  Group Project: Use unused GenAI models as an option for the company to forcast sales using two countries collected data. Precise information protected under NDA. | Team Leadership, Project Management, Stakeholder Communication, Strategic Problem Solving, Agentic AI Architecture (LangGraph, LangSmith, Modular AI Agents), Time-Series Forecasting (XGBoost, SARIMAX, SARIMA), Generative AI & Foundation Models (TimeGPT, Amazon Chronos, Lag-Llama), Retrieval-Augmented Generation (RAG; FAISS Vector Stores, PDF Ingestion), Zero-Shot & Fine-Tuning Experiments, Advanced Data Preprocessing, EDA, Model Evaluation & Validation (MAPE, R², Back-testing), Jupyter Notebooks, Google Colab, Cloud GPU Computing |
 
 
 ## Project 1: Detecting the Anomalous Activity of a Ship’s Engine
 ### Date: June, 2025
 
 ### Skills/Techniques
-- EDA (Exploratory Data Analysis)
-- Descriptive Statistics
-- Data Visualization
-- Anomaly Detection (Statistical)
-- IQR (Interquartile Range) Method
-- Anomaly Detection (Machine Learning)
-- One-Class SVM (Support Vector Machine)
-- Isolation Forest
-- Feature Scaling
-- PCA (Principal Component Analysis)
-  
+
+| EDA (Exploratory Data Analysis) | One-Class SVM (Support Vector Machine) |
+| :--- | :--- |
+| Descriptive Statistics | Isolation Forest |
+| Data Visualisation | Feature Scaling |
+| Histograms | PCA (Principal Component Analysis) |
+| Anomaly Detection (Statistical) | Jupyter Notebooks |
+| IQR (Interquartile Range) Method | Google Colab |
+| Anomaly Detection (Machine Learning) |  |
+
+
 ### Introduction
 A ship must operate smoothly and without issues to complete its tasks effectively. A poorly maintained ship engine can cost companies dearly, especially in supply-chain industries, as it will lead to transport inefficiencies, increased fuel consumption, increased risks of malfunctions, and potential safety hazards. The best approach to determine if the ship’s engine was poorly maintained without taking apart the engines themselves is to collect as much data as possible and determine if there was an anomaly. For this project, I was provided with a dataset regarding the functionalities of the ship’s engine, and the task was to determine if any anomalies were detected.
 
@@ -67,34 +67,18 @@ If the task was to detect anomalies and narrow down which feature or features to
 ### Date: June, 2025
 
 ### Skills/Techniques
-- Preprocessing
-- Feature Engineering
-- Outlier Detection
-- Duplicate Handling
-- Aggregation
-- Recency Calculation
-- Frequency Calculation
-- CLV (Customer Lifetime Value) Calculation
-- Customer Age Calculation
-- Feature Scaling
-- Column Transformer
-- Pipeline
-- EDA (Exploratory Data Analysis)
-- Histograms
-- Box Plots
-- Pair Plots
-- Correlation Matrix
-- Clustering
-- Elbow Method
-- Silhouette Score
-- Hierarchical Clustering
-- Dendrogram
-- K-Means Clustering
-- Dimension Reduction
-- PCA (Principal Component Analysis)
-- t-SNE (distributed Stochastic Neighbor Embedding)
-- Statistical Analysis
-- Model Evaluation
+| Preprocessing | StandardScaler | Silhouette Score |
+| :--- | :--- | :--- |
+| Feature Engineering | Column Transformer | Hierarchical Clustering |
+| Outlier Detection | Pipeline | Dendrogram |
+| Duplicate Handling | EDA (Exploratory Data Analysis) | K-Means Clustering |
+| Aggregation | Histograms | Dimension Reduction |
+| Recency Calculation | Box Plots | PCA (Principal Component Analysis) |
+| Frequency Calculation | Pair Plots | t-SNE (t-distributed Stochastic Neighbor Embedding) |
+| CLV (Customer Lifetime Value) Calculation | Correlation Matrix | Statistical Analysis |
+| Customer Age Calculation | Clustering | Model Evaluation |
+| RFM Analysis | Elbow Method | Jupyter Notebooks |
+| Feature Scaling | Inertia Analysis | Google Colab |
 
 ### Introduction
 The retail industry emphasises understanding and serving customers. Customer segmentation—dividing a customer base into distinct groups based on characteristics—is essential for this. Grouping customers helps businesses tailor marketing, improve product development, enhance satisfaction, boost retention, optimise pricing, and allocate resources effectively. This report presents a customer segmentation analysis on a transnational e-commerce dataset. Its aim is to develop a robust customer segmentation model using clustering (𝑘) techniques, allowing the e-commerce company to understand its diverse customer base better and enhance marketing efficiency.
@@ -150,21 +134,20 @@ Based on statistical methods through K-Means of clustering, the business should 
 - Ordinal Encoding
 - One-Hot Encoding
 - Missing Value Imputation/Removal
+- Binary Classification
 - Data Splitting
+- Stratified Train/Test Split (80/20)
+- Class Imbalance Handling
 - XGBoost
 - Neural Networks
+- Multi-Layer Perceptron (MLP)
+- ReLU Activation
+- Sigmoid Activation
 - Hyperparameter Tuning
-- Model Evaluation
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- AUC (Area Under Curve)
-- Confusion Matrix
-- Data Merging
-- Scikit-learn
-- TensorFlow/Keras
-- Data Analysis
+- GridSearchCV
+- Feature Importance Analysis
+- Loss Curve Analysis
+- Model Evaluation, Accuracy, Precision, Recall, F1 Score, AUC (Area Under Curve), Confusion Matrix, Data Merging, Scikit-learn, TensorFlow/Keras, Data Analysis, Jupyter Notebooks, Google Colab, Cloud GPU Computing
 
 ### Introduction
 Student dropout poses significant challenges for educational institutions, causing financial losses, reputational damage, and obstructing students' growth. Predicting dropout risk is vital for timely interventions to boost retention and success. This project develops and evaluates supervised learning models to forecast dropouts at various academic stages using data from a study group. The goal is to identify key dropout factors and find the most predictive stages. **To maintain anonymity, the specifics and details are protected under a signed NDA and will remain private.**
