@@ -345,7 +345,7 @@ The LLM analysis successfully confirmed the general areas identified by the LDA 
 
 ### Skills/Techniques
 | Team Leadership | Zero-Shot & Fine-Tuning Experiments |
-| :---: | :---: |
+| :--- | :--- |
 | Project Management | Advanced Data Preprocessing |
 | Stakeholder Communication | EDA |
 | Strategic Problem Solving | Model Evaluation & Validation (MAPE, R², Back-testing) |
